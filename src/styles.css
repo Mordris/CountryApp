@@ -147,7 +147,7 @@ h2 + button {
 }
 
 .country-box:hover {
-  background-color: #f8f8f8;
+  box-shadow: 0 0 10px #ffa94d;
 }
 
 .country-box img {
