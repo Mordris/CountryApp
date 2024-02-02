@@ -41,7 +41,7 @@ function Archive({ searchedCountries = [], isDarkMode, onFetchError }) {
         <CountryModal
           country={selectedCountry}
           onClose={handleCloseModal}
-          onFetchError={onFetchError} // Pass onFetchError to CountryModal
+          onFetchError={onFetchError}
         />
       )}
     </aside>

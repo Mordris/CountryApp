@@ -12,7 +12,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortAscending, setSortAscending] = useState(true);
-  const [error, setError] = useState(null); // State to track errors
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {

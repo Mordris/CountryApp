@@ -4,7 +4,6 @@ import React from "react";
 function ErrorPage() {
   const marginBottom = {
     marginBottom: "10px",
-    /* Add more specific styles for nested elements if needed */
   };
 
   return (

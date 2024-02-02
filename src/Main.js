@@ -1,12 +1,11 @@
 // Main.js
 import { memo, useState } from "react";
 import Archive from "./Archive";
-import ErrorPage from "./ErrorPage"; // Import ErrorPage
+import ErrorPage from "./ErrorPage";
 
 function Main({ searchedCountries, isFakeDark, toggleSortOrder }) {
-  const [error, setError] = useState(null); // State to track errors
+  const [error, setError] = useState(null);
 
-  // Function to handle API fetch errors
   const handleFetchError = (error) => {
     console.error("Error fetching country data:", error.message);
     setError(error.message);
@@ -23,7 +22,6 @@ function Main({ searchedCountries, isFakeDark, toggleSortOrder }) {
           <div className="sort-button-container">
             <button onClick={toggleSortOrder}>Sort by Name</button>
           </div>
-          {/* Pass handleFetchError function to Archive */}
           <Archive
             searchedCountries={searchedCountries}
             isFakeDark={isFakeDark}

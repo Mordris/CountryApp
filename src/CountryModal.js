@@ -6,7 +6,7 @@ import ErrorPage from "./ErrorPage";
 function CountryModal({ country, onClose, isDarkMode, onFetchError }) {
   const modalRef = useRef();
   const [borderCountries, setBorderCountries] = useState([]);
-  const [error, setError] = useState(null); // State to track errors
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchBorderCountries = async () => {
@@ -30,7 +30,7 @@ function CountryModal({ country, onClose, isDarkMode, onFetchError }) {
               } catch (error) {
                 console.error(`Error fetching ${borderCode}:`, error);
                 setError(error.message);
-                onFetchError(error); // Call onFetchError with the error
+                onFetchError(error);
                 return "N/A";
               }
             })
@@ -68,7 +68,6 @@ function CountryModal({ country, onClose, isDarkMode, onFetchError }) {
   }
 
   if (!country) {
-    // You may choose to log an error or handle it differently
     console.error("Country data is missing in CountryModal");
     return <ErrorPage />;
   }
