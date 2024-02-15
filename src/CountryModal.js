@@ -94,7 +94,9 @@ function CountryModal({ country, onClose, isDarkMode, onFetchError }) {
           <button className="close-button" onClick={onClose}>
             Close
           </button>
-          <h2>{name?.common || "N/A"}</h2>
+          <h2 className={`modal-header ${isDarkMode ? "dark-mode" : ""}`}>
+            {name?.common || "N/A"}
+          </h2>
           <img src={flags?.png} alt={`${name?.common} Flag`} />
           <p>
             <strong>Currencies:</strong>{" "}
