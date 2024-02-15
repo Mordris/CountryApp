@@ -120,7 +120,7 @@ function CountryModal({ country, onClose, isDarkMode, onFetchError }) {
             {borderCountries.length > 0 ? allBorderCountries : "N/A"}
           </p>
           <p>
-            <strong>Area:</strong> {area ? `${area} km²` : "N/A"}
+            <strong>Area:</strong> {area ? new Intl.NumberFormat('en-US').format(area).replace(/,/g, '.') + ' km²' : "N/A"}
           </p>
           <p>
             <strong>Population:</strong>{" "}
